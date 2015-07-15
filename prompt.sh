@@ -38,9 +38,9 @@ if [ -n "${BASH_VERSION}" ]; then
         local flag=$1
         local symbol=$2
         local color=${3:-$omg_default_color_on}
-        if [[ $flag == false ]]; then symbol=' '; fi
-
-        echo -n "${color}${symbol}  "
+        if [[ $flag == true ]]; then
+            echo -n "${color}${symbol}  "
+        fi
     }
 
     function custom_build_prompt {
@@ -135,7 +135,7 @@ if [ -n "${BASH_VERSION}" ]; then
 
             # where
 
-            prompt="${prompt} ${white_on_blue} ${black_on_blue}"
+            prompt="${prompt}${white_on_blue} ${black_on_blue}"
             if [[ $detached == true ]]; then
                 prompt+=$(enrich_append $detached $omg_detached_symbol "${white_on_blue}")
                 prompt+=$(enrich_append $detached "(${current_commit_hash:0:7})" "${black_on_blue}")
