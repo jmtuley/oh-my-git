@@ -73,26 +73,26 @@ if [ -n "${BASH_VERSION}" ]; then
 
 
         # foreground
-        local black='\e[0;30m'
-        local red='\e[0;31m'
-        local green='\e[0;32m'
-        local yellow='\e[0;33m'
-        local blue='\e[0;34m'
-        local purple='\e[0;35m'
-        local cyan='\e[0;36m'
-        local white='\e[0;37m'
+        local black='\[\e[0;30m\]'
+        local red='\[\e[0;31m\]'
+        local green='\[\e[0;32m\]'
+        local yellow='\[\e[0;33m\]'
+        local blue='\[\e[0;34m\]'
+        local purple='\[\e[0;35m\]'
+        local cyan='\[\e[0;36m\]'
+        local white='\[\e[0;37m\]'
 
         #background
-        local background_black='\e[40m'
-        local background_red='\e[41m'
-        local background_green='\e[42m'
-        local background_yellow='\e[43m'
-        local background_blue='\e[44m'
-        local background_purple='\e[45m'
-        local background_cyan='\e[46m'
-        local background_white='\e[47m'
+        local background_black='\[\e[40m\]'
+        local background_red='\[\e[41m\]'
+        local background_green='\[\e[42m\]'
+        local background_yellow='\[\e[43m\]'
+        local background_blue='\[\e[44m\]'
+        local background_purple='\[\e[45m\]'
+        local background_cyan='\[\e[46m\]'
+        local background_white='\[\e[47m\]'
         
-        local reset='\e[0m'     # Text Reset]'
+        local reset='\[\e[0m\]'     # Text Reset]'
 
         local black_on_white="${black}${background_white}"
         local yellow_on_white="${yellow}${background_white}"
