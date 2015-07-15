@@ -108,7 +108,8 @@ if [ -n "${BASH_VERSION}" ]; then
         local white_on_blue="${white}${background_blue}"
         local yellow_on_blue="${yellow}${background_blue}"
 
-
+        local green_on_white="${green}${background_white}"
+        local green_on_black="${green}${background_black}"
 
         # Flags
         local omg_default_color_on="${black_on_white}"
@@ -119,15 +120,15 @@ if [ -n "${BASH_VERSION}" ]; then
             prompt+=$(enrich_append $is_a_git_repo $omg_is_a_git_repo_symbol "${black_on_white}")
             prompt+=$(enrich_append $has_stashes $omg_has_stashes_symbol "${yellow_on_white}")
 
-            prompt+=$(enrich_append $has_untracked_files $omg_has_untracked_files_symbol "${blue_on_white}")
-            prompt+=$(enrich_append $has_modifications $omg_has_modifications_symbol "${blue_on_white}")
-            prompt+=$(enrich_append $has_deletions $omg_has_deletions_symbol "${blue_on_white}")
+            prompt+=$(enrich_append $has_untracked_files $omg_has_untracked_files_symbol "${red_on_white}")
+            prompt+=$(enrich_append $has_modifications $omg_has_modifications_symbol "${red_on_white}")
+            prompt+=$(enrich_append $has_deletions $omg_has_deletions_symbol "${red_on_white}")
             
 
             # ready
-            prompt+=$(enrich_append $has_adds $omg_has_adds_symbol "${black_on_white}")
-            prompt+=$(enrich_append $has_modifications_cached $omg_has_cached_modifications_symbol "${black_on_white}")
-            prompt+=$(enrich_append $has_deletions_cached $omg_has_cached_deletions_symbol "${black_on_white}")
+            prompt+=$(enrich_append $has_adds $omg_has_adds_symbol "${green_on_white}")
+            prompt+=$(enrich_append $has_modifications_cached $omg_has_cached_modifications_symbol "${green_on_white}")
+            prompt+=$(enrich_append $has_deletions_cached $omg_has_cached_deletions_symbol "${green_on_white}")
             
             # next operation
 
